@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Product = require('./../models/product.js');
+var Product = require('./../models/Product.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
@@ -21,6 +21,18 @@ module.exports.listview = function(req, res) {
   });
   
 };
+
+module.exports.new = function(req, res) {
+  
+  res.render('./../public/views/product/create.ejs',{
+    user: req.user ||null,
+    request: req
+    
+  });
+};
+  
+
+
 
 module.exports.list = function(req, res) {
   Product.find(function(err, data) {

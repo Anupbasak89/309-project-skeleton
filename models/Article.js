@@ -8,6 +8,7 @@ var ArticleSchema = {
     trim: true,
     required: 'Title required'
   },
+  
 
   content: {
     type: String,
