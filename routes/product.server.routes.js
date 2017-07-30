@@ -6,9 +6,12 @@ module.exports = function(app){
  app.route('/products/list')
     .get(products.listview);
     
- app.route('/product/new')
+ app.route('/products/new')
     .get(products.new);    
-    
+ 
+  app.route('/products/:productId')
+    .get(products.view);    
+       
     
     
  app.route('/api/products')
